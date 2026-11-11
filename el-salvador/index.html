@@ -40,7 +40,27 @@
   "@type": "Place",
   "name": "El Salvador"
  },
- "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026).",
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "csv, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_all_years_csv.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "gpkg, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_all_years_gpkg.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "parquet, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/zip/El%20Salvador.zip"
+  }
+ ]
 }
     </script>
 </head>
@@ -59,7 +79,7 @@
     <p class="toplinks">
         [<a href="https://noahdasanaike.github.io/explore/#c=El Salvador">explore on the map</a>]
         [<a href="#download">download</a>]
-        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook/SAGE_El%20Salvador_codebook.pdf" target="_blank" rel="noopener">codebook</a>]
         [<a href="/">all 134 countries</a>]
     </p>
 
@@ -88,7 +108,13 @@
     <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
         for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
         <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
-    <p>See the <a href="/#download">download section</a> on the main page.</p>
+    <p><strong>All years:</strong> <a class="dl" href="https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_all_years_csv.zip">[csv <span class="dl-size">1.1 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_all_years_gpkg.zip">[gpkg <span class="dl-size">1.1 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/zip/El%20Salvador.zip">[parquet <span class="dl-size">1.4 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/rds/El%20Salvador.RDS">[rds <span class="dl-size">2.1 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/codebook/SAGE_El%20Salvador_codebook.pdf" target="_blank" rel="noopener">[codebook <span class="dl-size">141 KB</span>]</a></p>
+<div class="table-scroll"><table class="plain"><thead><tr><th>Year</th><th>Downloads</th></tr></thead><tbody>
+<tr><td>2021</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_2021_csv.zip">[csv <span class="dl-size">229 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_2021_gpkg.zip">[gpkg <span class="dl-size">292 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/El%20Salvador/SAGE_El%20Salvador_2021.parquet">[parquet <span class="dl-size">179 KB</span>]</a></td></tr>
+<tr><td>2019</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_2019_csv.zip">[csv <span class="dl-size">114 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_2019_gpkg.zip">[gpkg <span class="dl-size">291 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/El%20Salvador/SAGE_El%20Salvador_2019.parquet">[parquet <span class="dl-size">100 KB</span>]</a></td></tr>
+<tr><td>2018</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_2018_csv.zip">[csv <span class="dl-size">590 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_2018_gpkg.zip">[gpkg <span class="dl-size">287 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/El%20Salvador/SAGE_El%20Salvador_2018.parquet">[parquet <span class="dl-size">441 KB</span>]</a></td></tr>
+<tr><td>2014</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/El%20Salvador/SAGE_El%20Salvador_2014_csv.zip">[csv <span class="dl-size">186 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/El%20Salvador/SAGE_El%20Salvador_2014_gpkg.zip">[gpkg <span class="dl-size">283 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/El%20Salvador/SAGE_El%20Salvador_2014.parquet">[parquet <span class="dl-size">134 KB</span>]</a></td></tr>
+</tbody></table></div>
 
     <p>In R or Python:</p>
     <pre>R:      install.packages("sage")

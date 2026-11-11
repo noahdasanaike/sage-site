@@ -40,7 +40,27 @@
   "@type": "Place",
   "name": "Estonia"
  },
- "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026).",
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "csv, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_all_years_csv.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "gpkg, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_all_years_gpkg.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "parquet, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/zip/Estonia.zip"
+  }
+ ]
 }
     </script>
 </head>
@@ -59,7 +79,7 @@
     <p class="toplinks">
         [<a href="https://noahdasanaike.github.io/explore/#c=Estonia">explore on the map</a>]
         [<a href="#download">download</a>]
-        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Estonia_codebook.pdf" target="_blank" rel="noopener">codebook</a>]
         [<a href="/">all 134 countries</a>]
     </p>
 
@@ -86,7 +106,13 @@
     <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
         for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
         <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
-    <p>See the <a href="/#download">download section</a> on the main page.</p>
+    <p><strong>All years:</strong> <a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_all_years_csv.zip">[csv <span class="dl-size">271 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_all_years_gpkg.zip">[gpkg <span class="dl-size">11 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/zip/Estonia.zip">[parquet <span class="dl-size">13 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/rds/Estonia.RDS">[rds <span class="dl-size">104 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Estonia_codebook.pdf" target="_blank" rel="noopener">[codebook <span class="dl-size">112 KB</span>]</a></p>
+<div class="table-scroll"><table class="plain"><thead><tr><th>Year</th><th>Downloads</th></tr></thead><tbody>
+<tr><td>2023</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_2023_csv.zip">[csv <span class="dl-size">80 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_2023_gpkg.zip">[gpkg <span class="dl-size">5.5 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Estonia/SAGE_Estonia_2023.parquet">[parquet <span class="dl-size">58 KB</span>]</a></td></tr>
+<tr><td>2019</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_2019_csv.zip">[csv <span class="dl-size">72 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_2019_gpkg.zip">[gpkg <span class="dl-size">5.7 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Estonia/SAGE_Estonia_2019.parquet">[parquet <span class="dl-size">49 KB</span>]</a></td></tr>
+<tr><td>2015</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_2015_csv.zip">[csv <span class="dl-size">58 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_2015_gpkg.zip">[gpkg <span class="dl-size">13 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Estonia/SAGE_Estonia_2015.parquet">[parquet <span class="dl-size">31 KB</span>]</a></td></tr>
+<tr><td>2011</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Estonia/SAGE_Estonia_2011_csv.zip">[csv <span class="dl-size">64 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Estonia/SAGE_Estonia_2011_gpkg.zip">[gpkg <span class="dl-size">14 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Estonia/SAGE_Estonia_2011.parquet">[parquet <span class="dl-size">32 KB</span>]</a></td></tr>
+</tbody></table></div>
 
     <p>In R or Python:</p>
     <pre>R:      install.packages("sage")

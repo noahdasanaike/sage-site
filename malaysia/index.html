@@ -40,7 +40,27 @@
   "@type": "Place",
   "name": "Malaysia"
  },
- "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026).",
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "csv, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_all_years_csv.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "gpkg, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_all_years_gpkg.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "parquet, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/zip/Malaysia.zip"
+  }
+ ]
 }
     </script>
 </head>
@@ -59,7 +79,7 @@
     <p class="toplinks">
         [<a href="https://noahdasanaike.github.io/explore/#c=Malaysia">explore on the map</a>]
         [<a href="#download">download</a>]
-        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Malaysia_codebook.pdf" target="_blank" rel="noopener">codebook</a>]
         [<a href="/">all 134 countries</a>]
     </p>
 
@@ -93,7 +113,13 @@
     <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
         for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
         <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
-    <p>See the <a href="/#download">download section</a> on the main page.</p>
+    <p><strong>All years:</strong> <a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_all_years_csv.zip">[csv <span class="dl-size">5.2 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_all_years_gpkg.zip">[gpkg <span class="dl-size">12 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/zip/Malaysia.zip">[parquet <span class="dl-size">12 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/rds/Malaysia.RDS">[rds <span class="dl-size">13 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Malaysia_codebook.pdf" target="_blank" rel="noopener">[codebook <span class="dl-size">724 KB</span>]</a></p>
+<div class="table-scroll"><table class="plain"><thead><tr><th>Year</th><th>Downloads</th></tr></thead><tbody>
+<tr><td>2022</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_2022_csv.zip">[csv <span class="dl-size">2.0 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_2022_gpkg.zip">[gpkg <span class="dl-size">3.5 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Malaysia/SAGE_Malaysia_2022.parquet">[parquet <span class="dl-size">1.1 MB</span>]</a></td></tr>
+<tr><td>2018</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_2018_csv.zip">[csv <span class="dl-size">1.3 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_2018_gpkg.zip">[gpkg <span class="dl-size">3.2 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Malaysia/SAGE_Malaysia_2018.parquet">[parquet <span class="dl-size">917 KB</span>]</a></td></tr>
+<tr><td>2013</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_2013_csv.zip">[csv <span class="dl-size">1.0 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_2013_gpkg.zip">[gpkg <span class="dl-size">3.1 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Malaysia/SAGE_Malaysia_2013.parquet">[parquet <span class="dl-size">805 KB</span>]</a></td></tr>
+<tr><td>2008</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Malaysia/SAGE_Malaysia_2008_csv.zip">[csv <span class="dl-size">790 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Malaysia/SAGE_Malaysia_2008_gpkg.zip">[gpkg <span class="dl-size">2.4 MB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Malaysia/SAGE_Malaysia_2008.parquet">[parquet <span class="dl-size">707 KB</span>]</a></td></tr>
+</tbody></table></div>
 
     <p>In R or Python:</p>
     <pre>R:      install.packages("sage")

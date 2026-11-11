@@ -40,7 +40,27 @@
   "@type": "Place",
   "name": "Guyana"
  },
- "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026).",
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "csv, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/csv/Guyana/SAGE_Guyana_all_years_csv.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "gpkg, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/gpkg/Guyana/SAGE_Guyana_all_years_gpkg.zip"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/zip",
+   "name": "parquet, all years",
+   "contentUrl": "https://storage.googleapis.com/sage-archive/zip/Guyana.zip"
+  }
+ ]
 }
     </script>
 </head>
@@ -59,7 +79,7 @@
     <p class="toplinks">
         [<a href="https://noahdasanaike.github.io/explore/#c=Guyana">explore on the map</a>]
         [<a href="#download">download</a>]
-        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Guyana_codebook.pdf" target="_blank" rel="noopener">codebook</a>]
         [<a href="/">all 134 countries</a>]
     </p>
 
@@ -84,7 +104,11 @@
     <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
         for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
         <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
-    <p>See the <a href="/#download">download section</a> on the main page.</p>
+    <p><strong>All years:</strong> <a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Guyana/SAGE_Guyana_all_years_csv.zip">[csv <span class="dl-size">320 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Guyana/SAGE_Guyana_all_years_gpkg.zip">[gpkg <span class="dl-size">268 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/zip/Guyana.zip">[parquet <span class="dl-size">426 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/rds/Guyana.RDS">[rds <span class="dl-size">396 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/codebook/SAGE_Guyana_codebook.pdf" target="_blank" rel="noopener">[codebook <span class="dl-size">79 KB</span>]</a></p>
+<div class="table-scroll"><table class="plain"><thead><tr><th>Year</th><th>Downloads</th></tr></thead><tbody>
+<tr><td>2025</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Guyana/SAGE_Guyana_2025_csv.zip">[csv <span class="dl-size">131 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Guyana/SAGE_Guyana_2025_gpkg.zip">[gpkg <span class="dl-size">142 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Guyana/SAGE_Guyana_2025.parquet">[parquet <span class="dl-size">125 KB</span>]</a></td></tr>
+<tr><td>2015</td><td><a class="dl" href="https://storage.googleapis.com/sage-archive/csv/Guyana/SAGE_Guyana_2015_csv.zip">[csv <span class="dl-size">190 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/gpkg/Guyana/SAGE_Guyana_2015_gpkg.zip">[gpkg <span class="dl-size">135 KB</span>]</a> <a class="dl" href="https://storage.googleapis.com/sage-archive/parquet_files/Guyana/SAGE_Guyana_2015.parquet">[parquet <span class="dl-size">163 KB</span>]</a></td></tr>
+</tbody></table></div>
 
     <p>In R or Python:</p>
     <pre>R:      install.packages("sage")
