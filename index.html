@@ -243,6 +243,23 @@
             overflow-x: auto;
         }
 
+        .coverage-table p.detail-dl {
+            margin: 0.2em 0 0.6em;
+            white-space: normal;
+        }
+
+        .coverage-table td.dl-links,
+        .coverage-table p.detail-dl {
+            text-align: left;
+        }
+
+        .coverage-table td.dl-links .dl,
+        .coverage-table p.detail-dl .dl {
+            margin-left: 0;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
         .coverage-table p.detail-page {
             margin: 0.3em 0 0.5em;
             font-weight: bold;
@@ -265,6 +282,14 @@
             }
 
             .coverage-table .pb-long {
+                display: none;
+            }
+
+            /* opened country: keep year, type, units, located share and downloads */
+            .coverage-table table.cov-years th:nth-child(3), .coverage-table table.cov-years td:nth-child(3),
+            .coverage-table table.cov-years th:nth-child(4), .coverage-table table.cov-years td:nth-child(4),
+            .coverage-table table.cov-years th:nth-child(7), .coverage-table table.cov-years td:nth-child(7),
+            .coverage-table table.cov-years th:nth-child(8), .coverage-table table.cov-years td:nth-child(8) {
                 display: none;
             }
 
@@ -521,35 +546,19 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
         R&nbsp;<code>arrow</code>. Polygon boundaries are not in this file; use the per-country bundles below or the
         <code>polygons/</code> tree for geometry.
     </p>
-    <p><strong>By country:</strong> each row below has a country's files for all years. Click a country to
-        download a single year. <strong>csv</strong> is a ZIP with one CSV file per election year, which opens in
+    <p><strong>By country:</strong> open a country in the <a href="#countries">Countries</a> table below to download
+        its files, for all years or for one election. <strong>csv</strong> is a ZIP with one CSV file per election year, which opens in
         Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries as a GeoPackage for QGIS, ArcGIS,
         R, or Python. <strong>parquet</strong> has the vote rows as Parquet; for all years it is a ZIP with the
         GeoParquet boundaries as well. <strong>rds</strong> is the native R <code>sf</code> object, with the polygons
         joined to the vote rows, for all years only. <strong>codebook</strong> is that country's section of the
         codebook, with its sources and notes. The citable copy of the full dataset is the <a id="dataverse-inline"
             href="#" target="_blank" rel="noopener">Harvard Dataverse deposit</a>.</p>
-    <div class="coverage-controls">
-        <input type="text" id="country-search" placeholder="Filter countries&hellip;" oninput="renderDownloads()">
-        <span id="dl-count" style="color:#666; font-size:0.9em;"></span>
-    </div>
-    <div class="coverage-wrap">
-        <table class="coverage-table dl-table">
-            <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>Years</th>
-                    <th>All years</th>
-                </tr>
-            </thead>
-            <tbody id="dl-body"></tbody>
-        </table>
-    </div>
 
     <h2 id="countries"><span id="coverage"></span>Countries</h2>
-    <p>Each country has a page with its elections, sources, and downloads by year; open it with the country&rsquo;s name or the <strong>page</strong> button. Click
-        elsewhere on the row to see its elections here, with the election type, the vote type or round where there
-        is one, and the number of units. Units are the smallest units in the data, and located units are those with
+    <p>Click a country&rsquo;s row to open its downloads and its elections by year, with the election type, the
+        vote type or round where there is one, and the number of units. The country&rsquo;s name and the
+        <strong>page</strong> button lead to its own page, with sources and notes. Units are the smallest units in the data, and located units are those with
         coordinates. Click a column to sort. The table by election is also available as a
         <a href="data/sage_coverage.csv" download data-gc="coverage-csv">CSV file</a>.
     </p>
@@ -1318,40 +1327,9 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
                 `${pdf ? ' target="_blank" rel="noopener"' : ''}>[${label}${size}]</a>`;
         }
 
-        function renderDownloads() {
-            if (!dlData) return;
-            const q = document.getElementById('country-search').value.trim().toLowerCase();
-            const names = Object.keys(dlData).sort((a, b) => a.localeCompare(b))
-                .filter(c => !q || c.toLowerCase().includes(q));
-            const esc = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
-            document.getElementById('dl-body').innerHTML = names.map(c => {
-                const d = dlData[c], years = Object.keys(d.years).sort();
-                const open = dlOpen.has(c) || names.length === 1;
-                const span = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : years[0];
-                const id = esc(c).replace(/'/g, '&#39;');
-                let html = `<tr class="cov-country" onclick="toggleDownloads('${id}')"><td>` +
-                    `<button class="cov-toggle" aria-expanded="${open}">${open ? '−' : '+'}</button>${esc(c)}</td>` +
-                    `<td>${span}</td><td class="dl-links">` +
-                    DL_FORMATS.map(k => dlLink(k, d.all[k], `${k}/all/${c}`)).join(' ') + '</td></tr>';
-                if (open) {
-                    html += `<tr class="cov-detail"><td colspan="3"><table class="cov-years"><tbody>` +
-                        years.slice().reverse().map(y => `<tr><td>${y}</td><td class="dl-links">` +
-                            ['csv', 'gpkg', 'parquet'].map(k => dlLink(k, d.years[y][k], `${k}/${y}/${c}`)).join(' ') +
-                            '</td></tr>').join('') + '</tbody></table></td></tr>';
-                }
-                return html;
-            }).join('');
-            document.getElementById('dl-count').textContent = `${names.length} countr${names.length === 1 ? 'y' : 'ies'}`;
-        }
-
-        function toggleDownloads(country) {
-            if (dlOpen.has(country)) dlOpen.delete(country); else dlOpen.add(country);
-            renderDownloads();
-        }
-
         function populateCountries() {
-            fetch('data/sage_downloads.json').then(r => r.json()).then(d => { dlData = d; renderDownloads(); })
-                .catch(() => { document.getElementById('dl-count').textContent = 'The download list did not load.'; });
+            fetch('data/sage_downloads.json').then(r => r.json()).then(d => { dlData = d; renderCoverage(); })
+                .catch(() => { });
         }
 
         // Coverage table: data/sage_coverage.json = {columns: [...], rows: [[...], ...]}
@@ -1403,9 +1381,16 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
         }
 
         function detailTable(c, rows) {
-            let html = '<table class="cov-years"><thead><tr><th>Year</th><th>Election type</th><th>Vote type</th>' +
+            const name = c.country;
+            const d = dlData && dlData[name];
+            let html = '';
+            if (d) {
+                html += '<p class="detail-dl"><strong>All years:</strong> ' +
+                    DL_FORMATS.map(k => dlLink(k, d.all[k], `${k}/all/${name}`)).filter(Boolean).join(' ') + '</p>';
+            }
+            html += '<table class="cov-years"><thead><tr><th>Year</th><th>Election type</th><th>Vote type</th>' +
                 '<th class="num">Round</th><th class="num">Units</th><th class="num">% located</th>' +
-                '<th class="num">Votes</th><th>Polygons</th></tr></thead><tbody>';
+                '<th class="num">Votes</th><th>Polygons</th><th>Download this year</th></tr></thead><tbody>';
             let prev = null;
             rows.forEach(r => {
                 const first = r.year !== prev;
@@ -1413,7 +1398,9 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
                     `<td>${covEsc(r.election_type ?? '')}</td><td>${covEsc(r.special_type ?? '')}</td>` +
                     `<td class="num">${r.round ?? ''}</td><td class="num">${covNum(r.units)}</td>` +
                     `<td class="num">${covPct(r.share)}</td><td class="num">${covNum(r.votes)}</td>` +
-                    `<td>${r.poly ? 'yes' : ''}</td></tr>`;
+                    `<td>${r.poly ? 'yes' : ''}</td>` +
+                    `<td class="dl-links">${first && d && d.years[r.year] ? ['csv', 'gpkg', 'parquet'].map(k =>
+                        dlLink(k, d.years[r.year][k], `${k}/${r.year}/${name}`)).filter(Boolean).join(' ') : ''}</td></tr>`;
                 prev = r.year;
             });
             return html + '</tbody></table>';
@@ -1461,7 +1448,7 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
                     `onclick="event.stopPropagation()"><span class="pb-long">country </span>page &rarr;</a></td></tr>`;
                 if (open) html += `<tr class="cov-detail"><td colspan="${COV_TOP.length + 1}">` +
                     `<p class="detail-page"><a href="/${countrySlug(c.country)}/">Open the ${covEsc(c.country)} page ` +
-                    `for sources, notes, and downloads by year &rarr;</a></p><div class="detail-scroll">${detailTable(c, rows)}</div></td></tr>`;
+                    `for sources and notes &rarr;</a></p><div class="detail-scroll">${detailTable(c, rows)}</div></td></tr>`;
                 return html;
             }).join('');
             const nContests = list.reduce((n, x) => n + x.rows.length, 0);

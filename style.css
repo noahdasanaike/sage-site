@@ -202,6 +202,23 @@
             overflow-x: auto;
         }
 
+        .coverage-table p.detail-dl {
+            margin: 0.2em 0 0.6em;
+            white-space: normal;
+        }
+
+        .coverage-table td.dl-links,
+        .coverage-table p.detail-dl {
+            text-align: left;
+        }
+
+        .coverage-table td.dl-links .dl,
+        .coverage-table p.detail-dl .dl {
+            margin-left: 0;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
         .coverage-table p.detail-page {
             margin: 0.3em 0 0.5em;
             font-weight: bold;
@@ -224,6 +241,14 @@
             }
 
             .coverage-table .pb-long {
+                display: none;
+            }
+
+            /* opened country: keep year, type, units, located share and downloads */
+            .coverage-table table.cov-years th:nth-child(3), .coverage-table table.cov-years td:nth-child(3),
+            .coverage-table table.cov-years th:nth-child(4), .coverage-table table.cov-years td:nth-child(4),
+            .coverage-table table.cov-years th:nth-child(7), .coverage-table table.cov-years td:nth-child(7),
+            .coverage-table table.cov-years th:nth-child(8), .coverage-table table.cov-years td:nth-child(8) {
                 display: none;
             }
 
