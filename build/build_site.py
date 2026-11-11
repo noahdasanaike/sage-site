@@ -79,6 +79,7 @@ for r in cov['rows']:
     contests.setdefault(r[ci['country']], []).append({c: r[i] for c, i in ci.items()})
 meta = json.loads(rd('src/country_meta.json'))
 downloads = json.loads(rd('data/sage_downloads.json')) if os.path.exists(os.path.join(ROOT, 'data/sage_downloads.json')) else {}
+admin_dl = json.loads(rd('data/sage_admin_downloads.json')) if os.path.exists(os.path.join(ROOT, 'data/sage_admin_downloads.json')) else {}
 countries = sorted(contests)
 N = len(countries)
 
@@ -215,6 +216,17 @@ def country_page(c):
                    f'<tbody>\n{yrs}\n</tbody></table></div>')
     else:
         dl_html = f'<p>See the <a href="/#download">download section</a> on the main page.</p>'
+    # results added up within administrative areas
+    a = admin_dl.get(c) or {}
+    if a:
+        order = ['gadm1', 'gadm2', 'gadm3', 'gadm4', 'gadm5', 'nuts1', 'nuts2', 'nuts3', 'us_county']
+        cells = ' '.join(dl_cell({'path': a[lv]['path'], 'bytes': a[lv]['bytes']},
+                                 f'{a[lv]["label"].lower()} csv') for lv in order if lv in a)
+        dl_html += (f'\n    <p><strong>By area:</strong> {cells}</p>\n'
+                    f'    <p class="facts" style="font-size:0.9em;">The same results added up within administrative '
+                    f'areas (GADM 4.1{", Eurostat NUTS" if any(k.startswith("nuts") for k in a) else ""}'
+                    f'{", US counties" if "us_county" in a else ""}), all years in one file per level. You can also '
+                    f'<a href="{EXPLORER}#c={E(c)}&amp;a={next(lv for lv in order if lv in a)}">map them</a>.</p>')
 
     sources = m.get('sources', [])
     notes = m.get('notes', [])

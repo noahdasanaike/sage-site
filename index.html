@@ -550,6 +550,14 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
         joined to the vote rows, for all years only. <strong>codebook</strong> is that country's section of the
         codebook, with its sources and notes. The citable copy of the full dataset is the <a id="dataverse-inline"
             href="#" target="_blank" rel="noopener">Harvard Dataverse deposit</a>.</p>
+    <p><strong>By administrative area:</strong> I also added up the results within standard areas: the GADM 4.1
+        divisions (such as provinces, districts and communes), Eurostat NUTS regions for European countries, and US
+        counties. Each country has one CSV file per level, under <em>By area</em> when you open
+        it in the Countries table and on its own page, and the map can show any level under <em>Aggregate to</em>. A polling unit with a drawn boundary goes to the area that holds most of it, and one
+        placed by its point goes to the area that contains the point. The <a
+            href="https://storage.googleapis.com/sage-archive/admin/README.md">method note</a> describes the rules, and
+        <a href="https://storage.googleapis.com/sage-archive/admin/coverage.parquet">coverage.parquet</a> gives the
+        share of each contest's votes placed in an area.</p>
 
     <h2 id="countries"><span id="coverage"></span>Countries</h2>
     <p>Click a country&rsquo;s row to open its downloads and its elections by year, with the election type, the
@@ -1323,8 +1331,15 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
                 `${pdf ? ' target="_blank" rel="noopener"' : ''}>[${label}${size}]</a>`;
         }
 
+        // Results by administrative area: data/sage_admin_downloads.json =
+        //   {Country: {gadm1: {label, path, bytes, n_areas, years}, ..., nuts3: {...}, us_county: {...}}}
+        let adminDl = null;
+        const ADMIN_ORDER = ['gadm1', 'gadm2', 'gadm3', 'gadm4', 'gadm5', 'nuts1', 'nuts2', 'nuts3', 'us_county'];
+
         function populateCountries() {
             fetch('data/sage_downloads.json').then(r => r.json()).then(d => { dlData = d; renderCoverage(); })
+                .catch(() => { });
+            fetch('data/sage_admin_downloads.json').then(r => r.json()).then(d => { adminDl = d; renderCoverage(); })
                 .catch(() => { });
         }
 
@@ -1383,6 +1398,11 @@ Python: pip install "git+https://github.com/noahdasanaike/sage.git#subdirectory=
             if (d) {
                 html += '<p class="detail-dl"><strong>All years:</strong> ' +
                     DL_FORMATS.map(k => dlLink(k, d.all[k], `${k}/all/${name}`)).filter(Boolean).join(' ') + '</p>';
+            }
+            const a = adminDl && adminDl[name];
+            if (a && Object.keys(a).length) {
+                html += '<p class="detail-dl"><strong>By area:</strong> ' +
+                    ADMIN_ORDER.filter(lv => a[lv]).map(lv => dlLink(`${a[lv].label.toLowerCase()} csv`, a[lv], `admin_csv/${lv}/${name}`)).join(' ') + '</p>';
             }
             html += '<table class="cov-years"><thead><tr><th>Year</th><th>Election type</th><th>Vote type</th>' +
                 '<th class="num">Round</th><th class="num">Units</th><th class="num">% located</th>' +
