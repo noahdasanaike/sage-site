@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Myanmar election results by parliamentary constituency, 2010 to 2015 | SAGE</title>
+    <meta name="description" content="Myanmar legislative election results by parliamentary constituency for 2010 and 2015, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/myanmar/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Myanmar election results by parliamentary constituency, 2010 to 2015 (SAGE)",
+ "description": "Myanmar legislative election results by parliamentary constituency for 2010 and 2015, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/myanmar/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Myanmar",
+  "Myanmar elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2010/2015",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Myanmar"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Myanmar</div>
+
+    <header>
+        <h1>Myanmar: election results by parliamentary constituency</h1>
+        <p class="facts">2010&ndash;2015 &middot; 2 elections
+            &middot; MMR</p>
+    </header>
+
+    <p>SAGE has legislative election results for Myanmar from 2 elections between 2010 and 2015: 2010 and 2015. The smallest unit is the parliamentary constituency. The 2015 election has 322 parliamentary constituencies, and 97% of them have a location. Unit boundaries are available for every election.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Myanmar">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2010</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">325</td><td class="num">100%</td><td class="num">20,626,524</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Myanmar&amp;y=2010">[map]</a></td></tr>
+<tr><td>2015</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">322</td><td class="num">97%</td><td class="num">20,994,957</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Myanmar&amp;y=2015">[map]</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Myanmar", years = 2015)
+
+Python: import sage
+        sage.sage_load("Myanmar", years=[2015])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Union Election Commission</li></ul>
+    <h2>Notes</h2>
+<ul><li>Lower house refers to the Pyithu Hluttaw despite no formal delineation.</li></ul>
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    <p>Some of these data come from other researchers&rsquo; collections; see <a href="/#attribution">please also cite</a>.</p>
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/mozambique/">Mozambique</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/namibia/">Namibia</a> &rarr;
+    </p>
+</body>
+
+</html>

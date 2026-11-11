@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netherlands election results by polling station, 2010 to 2025 | SAGE</title>
+    <meta name="description" content="Netherlands legislative election results by polling station for 2010, 2012, 2017, 2021, 2023 and 2025, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/netherlands/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Netherlands election results by polling station, 2010 to 2025 (SAGE)",
+ "description": "Netherlands legislative election results by polling station for 2010, 2012, 2017, 2021, 2023 and 2025, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/netherlands/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Netherlands",
+  "Netherlands elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2010/2025",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Netherlands"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Netherlands</div>
+
+    <header>
+        <h1>Netherlands: election results by polling station</h1>
+        <p class="facts">2010&ndash;2025 &middot; 6 elections
+            &middot; NLD</p>
+    </header>
+
+    <p>SAGE has legislative election results for the Netherlands from 6 elections between 2010 and 2025: 2010, 2012, 2017, 2021, 2023 and 2025. The smallest unit is the polling station. The 2025 election has 10,085 polling stations, and 96% of them have a location. Unit boundaries are available for every election.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Netherlands">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2010</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">9,581</td><td class="num">100%</td><td class="num">9,347,166</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2010">[map]</a></td></tr>
+<tr><td>2012</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">9,514</td><td class="num">100%</td><td class="num">9,421,602</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2012">[map]</a></td></tr>
+<tr><td>2017</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">391</td><td class="num">99%</td><td class="num">10,524,838</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2017">[map]</a></td></tr>
+<tr><td>2021</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13,824</td><td class="num">100%</td><td class="num">10,418,758</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2021">[map]</a></td></tr>
+<tr><td>2023</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">10,046</td><td class="num">95%</td><td class="num">10,432,167</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2023">[map]</a></td></tr>
+<tr><td>2025</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">10,085</td><td class="num">96%</td><td class="num">10,571,990</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Netherlands&amp;y=2025">[map]</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Netherlands", years = 2025)
+
+Python: import sage
+        sage.sage_load("Netherlands", years=[2025])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Kiesraad</li></ul>
+    <h2>Notes</h2>
+<ul><li>Election results at the municipality level for 2017 due to incomplete polling station results.</li></ul>
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/nepal/">Nepal</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/new-zealand/">New Zealand</a> &rarr;
+    </p>
+</body>
+
+</html>

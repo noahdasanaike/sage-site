@@ -1,0 +1,1079 @@
+{
+ "Afghanistan": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Independent Election Commission of Afghanistan (scraped by Colin Cookman)"
+  ]
+ },
+ "Albania": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Komisioni Qendror i Zgjedhjeve"
+  ]
+ },
+ "Argentina": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Dirección Nacional Electoral"
+  ]
+ },
+ "Armenia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Կենտրոնական ընտրական հանձնաժողով (Central Electoral Commission of Armenia)"
+  ]
+ },
+ "Australia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Australian Electoral Commission"
+  ],
+  "notes": [
+   "There is an \"informal\" party type."
+  ]
+ },
+ "Austria": {
+  "unit": "Municipality (gemeinde)",
+  "election_types": "Legislative",
+  "sources": [
+   "Statistik Austria",
+   "Bundesministerium für Inneres"
+  ]
+ },
+ "Bangladesh": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Bangladesh Election Commission"
+  ]
+ },
+ "Barbados": {
+  "unit": "Polling Division (2022), Constituency (2026)",
+  "election_types": "Legislative"
+ },
+ "Belgium": {
+  "unit": "Municipality (gemeente)",
+  "election_types": "Legislative",
+  "sources": [
+   "IBZ - SPF Intérieur"
+  ],
+  "notes": [
+   "Provinces are assigned retrospectively to municipalities due to overlapping spatial polygons, which may introduce some errors."
+  ]
+ },
+ "Belize": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Benin": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Bhutan": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Election Commission of Bhutan"
+  ]
+ },
+ "Bolivia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Órgano Electoral Plurinacional"
+  ]
+ },
+ "Bosnia and Herzegovina": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Središnje izborno povjerenstvo Bosne i Hercegovine"
+  ],
+  "notes": [
+   "Results are the House of Representatives of the Parliamentary Assembly of Bosnia and Herzegovina (Federation and Republika Srpska parts) and the three members of the Presidency, distinguished by special_type. NAME1 is the entity. Postal, absentee, and mobile-team ballots are counted centrally and are not included. Thiessen polygons are generated per contest over the territory that votes in it."
+  ]
+ },
+ "Botswana": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Independent Electoral Commission"
+  ],
+  "notes": [
+   "2014 party vote totals differ from Wikipedia aggregates by a notable margin."
+  ]
+ },
+ "Brazil": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Tribunal Superior Eleitoral"
+  ],
+  "notes": [
+   "Municipality names are in Latin-ASCII format. To merge with accented data in R, apply: stringi::stri_trans_general(., id = \"Latin-ASCII\")."
+  ]
+ },
+ "Bulgaria": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Central Election Commission"
+  ],
+  "notes": [
+   "Party vote totals in 2014 differ from Wikipedia aggregates by a notable margin."
+  ]
+ },
+ "Cabo Verde": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Comissão Nacional de Eleições"
+  ]
+ },
+ "Cambodia": {
+  "unit": "Commune",
+  "election_types": "Legislative"
+ },
+ "Canada": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Elections Canada"
+  ],
+  "notes": [
+   "There is an \"unaffiliated\" party type."
+  ]
+ },
+ "Chile": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Servicio Electoral de Chile"
+  ],
+  "notes": [
+   "The _p suffix on geometry columns refers to latitude-longitude geocodings on individual polling stations, whereas geometry is provided at a higher level in the supplementary shapefiles."
+  ]
+ },
+ "Colombia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Registraduría Nacional del Estado Civil"
+  ]
+ },
+ "Costa Rica": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Tribunal Supremo de Elecciones, República de Costa Rica"
+  ]
+ },
+ "Croatia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Državno izborno povjerenstvo"
+  ],
+  "notes": [
+   "Party coalitions in the \"party\" column follow the same ordering as in the original data (\"party_b\"), leading to duplicate coalitions of different party orderings.",
+   "Several party name-party acronym correspondences are assumed due to variability in reporting as coalition members.",
+   "The _p suffix on geometry columns refers to latitude-longitude geocodings on individual polling stations, whereas geometry is provided at a higher level in the supplementary shapefiles."
+  ]
+ },
+ "Cyprus": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Υπουργείο Εσωτερικών (Ministry of Interior)"
+  ]
+ },
+ "Czechia": {
+  "unit": "Election Precinct (okrsek)",
+  "election_types": "Legislative",
+  "sources": [
+   "Český statistický úřad"
+  ]
+ },
+ "Democratic Republic of the Congo": {
+  "unit": "Polling Station",
+  "election_types": "Presidential"
+ },
+ "Denmark": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "KMD"
+  ],
+  "notes": [
+   "The _p suffix on geometry columns refers to latitude-longitude geocodings on individual polling stations, whereas geometry is provided at a higher level in the supplementary shapefiles."
+  ]
+ },
+ "Dominica": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Office"
+  ]
+ },
+ "Dominican Republic": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Junta Central Electoral"
+  ]
+ },
+ "Ecuador": {
+  "unit": "Parish",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Consejo Nacional Electoral"
+  ]
+ },
+ "Egypt": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential"
+ },
+ "El Salvador": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Tribunal Supremo Electoral"
+  ]
+ },
+ "Estonia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Valimised Eestis"
+  ]
+ },
+ "Fiji": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Fijian Elections Office"
+  ]
+ },
+ "Finland": {
+  "unit": "Voting Districts (2019), Municipality",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Ministry of Justice"
+  ],
+  "notes": [
+   "Issues distinguishing between independent candidates and the Independence Party in the 2019 elections."
+  ]
+ },
+ "France": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Ministère de l’Intérieur",
+   "INSEE"
+  ],
+  "notes": [
+   "Missing several overseas commune boundaries (partially addressed for 2017, but not 2012 or before).",
+   "2022 and 2024 boundaries are constructed from Thiessen polygons first run on each individual point, then grouped together by bureau to vote according to the home address to bureau de vote correspondence file published by INSEE. 2022 mappings are used for 2024; according to INSEE, “only 65 creations and 4 deletions of polling stations were observed between February 2023 and February 2024 (out of a total of 69,400 polling stations).” Note that this can produce enclaves which are nonetheless accurate. Thiessen polygons are only generated within, not across, municipalities; that is, the procedure is run one municipality at a time for all points assigned to the respective municipality. There are three exceptions: overseas departments of code 97, where I generate Thiessen from polling station addresses (type = “Thiessen”); units in Paris, which are reported exactly (type = “Actual”); and municipalities with only one polling station, which use the full municipality boundary (type = “Actual”).",
+   "Supplementary shapefiles for France (<= 2012) are provided at the NAME3_b (commune) level."
+  ]
+ },
+ "Gambia": {
+  "unit": "Constituency",
+  "election_types": "Presidential"
+ },
+ "Georgia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Cesko"
+  ]
+ },
+ "Germany": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Die Bundeswahlleiterin",
+   "Bundesamt für Kartographie und Geodäsie"
+  ],
+  "notes": [
+   "Single shapefiles are assigned to Berlin and Hamburg, respectively.",
+   "Supplementary shapefiles for Germany are provided at the NAME4 (gemeinde) level."
+  ]
+ },
+ "Ghana": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Peace FM Online",
+   "Brian Engelsma (constituency boundaries)"
+  ]
+ },
+ "Greece": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Υπουργείο Εσωτερικών και Διοικητικής Ανασυγκρότησης της Ελλάδας (Hellenic Ministry of the Interior and Administrative Reorganization)"
+  ]
+ },
+ "Greenland": {
+  "unit": "Settlements",
+  "election_types": "Legislative",
+  "sources": [
+   "KIMIK iT"
+  ]
+ },
+ "Grenada": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Guatemala": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "El Tribunal Supremo Electoral"
+  ],
+  "notes": [
+   "Voting centre coordinates may be slightly off owing to mismatch in variable names and coding numbers between the election results and the polling station address sheet."
+  ]
+ },
+ "Guyana": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Guyana Elections Commission"
+  ]
+ },
+ "Honduras": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Consejo Nacional Electoral"
+  ],
+  "notes": [
+   "Legislative election results are summed by party across the list."
+  ]
+ },
+ "Hong Kong": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "選舉事務處 (Registration and Electoral Office)"
+  ],
+  "notes": [
+   "Thiessen polygons are buffered by 2km to include all polling stations."
+  ]
+ },
+ "Hungary": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Nemzeti Választási Iroda"
+  ]
+ },
+ "Iceland": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Hagstofa Íslands",
+   "Landmælingar Íslands"
+  ]
+ },
+ "India": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Respective State and Union Territory Election Commissions"
+  ],
+  "notes": [
+   "Thiessen polygons are generated separately by region, given substantial variation in how results are reported, digitized, and geocoded across states and union territories.",
+   "Three supplementary shapefiles for India are provided: Thiessen polygons, 1km point buffer, and 5km point buffer."
+  ]
+ },
+ "Indonesia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Komisi Pemilihan Umum Republik Indonesia"
+  ],
+  "notes": [
+   "Villages are matched to boundaries via a two-step process, whereby the name of the village is geocoded and the resulting latitude-longitude are matched to village boundaries.",
+   "Identifier code NAME columns (i.e., NAME1_b, NAME2_b, etc.) change between 2019 and 2024 election, but the names of places themselves (provinsi, kota, kecamatan, kelurahan) are largely consistent across years.",
+   "Supplementary shapefiles for Indonesia are provided at the NAME4 (village) level."
+  ]
+ },
+ "Iran": {
+  "unit": "County",
+  "election_types": "Presidential",
+  "sources": [
+   "Ministry of Interior"
+  ],
+  "notes": [
+   "Iranian election results are purportedly reported by city, though in some instances (Chardavol specifically) the unit is above or below that level; furthermore, there appears to be some degree of undercounting in the results. Polygons are obtained by getting “city” centroids then constructing Thiessen polygons, so between the apparent result undercounting and the absence of formal unit boundaries there is more error than expected on average here."
+  ]
+ },
+ "Iraq": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Ireland": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Oireachtas"
+  ],
+  "notes": [
+   "All votes reported are for first-preference."
+  ]
+ },
+ "Isle of Man": {
+  "unit": "Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Isle of Man Government, Elections"
+  ],
+  "notes": [
+   "House of Keys general elections in the 12 two-member constituencies of the 2013 boundaries, used unchanged in 2016, 2021 and 2026.",
+   "Each voter may cast up to two votes, so total_votes is the sum of candidate votes in the constituency and is roughly 1.7 to 1.9 times the number of voters. Votes are recorded by candidate; party is the ballot description on the Notice of Poll, and candidates without one are Independent.",
+   "The 2021 and 2026 figures are transcribed from hand-filled Notices of Result, read twice independently, and the two readings agree on every figure. No 2026 electorate by constituency was published, so reg and turnout_reg are missing for 2026.",
+   "Constituency polygons are the Isle of Man Government's House of Keys constituency boundaries."
+  ]
+ },
+ "Israel": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Bechirot"
+  ],
+  "notes": [
+   "Polling stations located in the West Bank are geocoded but lack Thiessen polygons."
+  ]
+ },
+ "Italy": {
+  "unit": "Municipality (commune)",
+  "election_types": "Legislative",
+  "sources": [
+   "Ministero dell'Interno",
+   "ISTAT"
+  ],
+  "notes": [
+   "Some of the party name translations for earlier Italian electoral alliances required a degree of guesswork, so it is recommended that one defer to the untranslated original names as reported in the election results."
+  ]
+ },
+ "Ivory Coast": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Jamaica": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Commission of Jamaica"
+  ]
+ },
+ "Japan": {
+  "unit": "Municipality (市区町村)",
+  "election_types": "Legislative",
+  "sources": [
+   "総務省 (Ministry of Internal Affairs and Communications)"
+  ]
+ },
+ "Kenya": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Independent Electoral and Boundaries Commission (scraped by Rod Alence)"
+  ]
+ },
+ "Kosovo": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Komisioni Qendror i Zgjedhjeve"
+  ]
+ },
+ "Kyrgyzstan": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "notes": [
+   "Kyrgyzstan has an \"against all\" vote that is named accordingly in the party column."
+  ]
+ },
+ "Latvia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Centrālā vēlēšanu komisija"
+  ],
+  "notes": [
+   "Regions imputed for non-2018 years using spatial coordinates of polling stations and known region boundaries."
+  ]
+ },
+ "Lebanon": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "موقع وزارة الداخلية والبلديات اللبنانية (Ministry of Interior and Municipalities)"
+  ],
+  "notes": [
+   "\"Abroad\" special type inferred using place names in NAME3, some of which are locations definitively outside Lebanon. The 2022 election publishes no polling-station coordinates, so 2022 stations are located by two routes recorded in geometry_type_b: reuse of a 2018 station coordinate where the station recurs, and fresh geocoding of the building name otherwise. Of 6,860 in-country units, 4,937 reuse a 2018 station and 556 are freshly geocoded to the building (80.1% station level); the remaining 1,367 fall back to a locality centroid (1,154 from 2018, 213 geocoded) because the source names the venue only generically, e.g. \"the public school\". Every in-country 2022 unit has a location; rows still marked Missing are out-of-country (\"Abroad\") voting, which has no location in Lebanon by construction."
+  ]
+ },
+ "Lesotho": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Independent Electoral Commission"
+  ]
+ },
+ "Liberia": {
+  "unit": "Polling Station",
+  "election_types": "Presidential"
+ },
+ "Liechtenstein": {
+  "unit": "Municipality",
+  "election_types": "Legislative",
+  "sources": [
+   "Landtagswahlen"
+  ]
+ },
+ "Lithuania": {
+  "unit": "Precinct (apylinkės)",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Central Electoral Commission"
+  ]
+ },
+ "Luxembourg": {
+  "unit": "Municipality (commune)",
+  "election_types": "Legislative",
+  "sources": [
+   "Grand-Duché de Luxembourg"
+  ]
+ },
+ "Madagascar": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Commission électorale nationale indépendante pour la transition"
+  ],
+  "notes": [
+   "2018 election aggregate vote counts differ from official reports, but candidate rank order and second round results are the same."
+  ]
+ },
+ "Malawi": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Malawi Electoral Commission"
+  ]
+ },
+ "Malaysia": {
+  "unit": "Polling District",
+  "election_types": "Legislative",
+  "sources": [
+   "Election Commission of Malaysia"
+  ],
+  "notes": [
+   "Malaysian coalition results align with Wikipedia aggregates, but there seem to be discrepancies in the vote-shares attained by the parties within each coalition.",
+   "Beginning with the 2013 election, results are provided at the saluran (polling-stream) level: each polling district (daerah mengundi) is divided into several streams that share one polling centre and the same geometry. The party column gives the ballot-symbol party (the coalition for BN/PH/PN/GPS or a standalone party), with the component party in party_b and the coalition in party_c. The 2008 election remains at parliamentary-constituency level. Polling-district polygons are Thiessen cells built from the district points (Tindak Malaysia daerah-mengundi centroids where available, otherwise Google-geocoded polling centres), because gazetted polling-district boundaries are not public for Sarawak and do not tile the country's unpopulated interior."
+  ]
+ },
+ "Maldives": {
+  "unit": "Ballot Box",
+  "election_types": "Legislative"
+ },
+ "Malta": {
+  "unit": "Electoral Division",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Commission of Malta"
+  ],
+  "notes": [
+   "Votes are first-count (first-preference) votes under the Single Transferable Vote, summed from candidates to parties. Later-count transfers are not recorded.",
+   "The 13 electoral divisions are the finest published grain. Ballot boxes are mixed within each division before counting, so no locality or polling-station results exist.",
+   "Geometry is Missing for all years. Division boundaries are redrawn before each election and are published only as street-level descriptions, not as maps or polygons.",
+   "total_votes is the division's published valid vote, and turnout_reg is valid votes over the revised electoral register, so it runs a few points below the official turnout, which counts all ballots cast."
+  ]
+ },
+ "Mauritania": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "اللجنة الوطنية المستقلة للانتخابات"
+  ]
+ },
+ "Mexico": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Instituto Nacional Electoral",
+   "Magar (2019)"
+  ],
+  "notes": [
+   "NAME3_imp is generated piece-wise: polling stations are spatially matched to municipality boundaries, then filled by NAME3 where NAME3 is not NA, then filled by NAME1, NAME2, and NAME4."
+  ]
+ },
+ "Moldova": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Comisia Electorală Centrală a Republicii Moldova"
+  ]
+ },
+ "Mongolia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Монгол Улсын Сонгуулийн ерөнхий хороо нь"
+  ]
+ },
+ "Montenegro": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Državna izborna komisija - Crna Gora"
+  ]
+ },
+ "Morocco": {
+  "unit": "Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Ministère de l'Intérieur, via the Hespress election portal",
+   "Tafra"
+  ],
+  "notes": [
+   "Results are for the 92 local constituencies of the House of Representatives, with the same boundaries and seat counts in 2016, 2021 and 2026. The regional and national lists are reported only at region or national level and are not included.",
+   "Vote figures come from the Hespress election portal, which republishes the Ministry of the Interior's final results. The 2021 figures match the Ministry's own results file list for list, and the 2016 figures match Tafra's compilation. Hespress has no 2016 page for El Hajeb, so its 2016 lists come from Tafra.",
+   "total_votes is the sum of valid list votes in the constituency. Registered voters and invalid ballots are not published by constituency.",
+   "The 65 constituencies that are a whole province or prefecture use geoBoundaries ADM2 polygons. 23 split constituencies are unions of the OpenStreetMap communes and arrondissements named in Décret n° 2-11-603 (2011). Four split constituencies (Rabat-Océan, Rabat-Chellah, Marrakech-Ménara and Marrakech-Guéliz-Ennakhil) have Missing geometry because the decree divides them by units with no published boundaries.",
+   "Constituencies in Western Sahara are included. Laâyoune, Boujdour, Es-Semara, Oued Ed-Dahab and Aousserd lie wholly or almost wholly in the territory, and Tarfaya and Assa-Zag straddle its northern limit."
+  ]
+ },
+ "Mozambique": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential"
+ },
+ "Myanmar": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Union Election Commission"
+  ],
+  "notes": [
+   "Lower house refers to the Pyithu Hluttaw despite no formal delineation."
+  ]
+ },
+ "Namibia": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "The Institute for Public Policy Research"
+  ]
+ },
+ "Nepal": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Election Commission, Nepal"
+  ],
+  "notes": [
+   "Party vote totals differ from Wikipedia aggregates by a notable margin."
+  ]
+ },
+ "Netherlands": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Kiesraad"
+  ],
+  "notes": [
+   "Election results at the municipality level for 2017 due to incomplete polling station results."
+  ]
+ },
+ "New Zealand": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Commission"
+  ]
+ },
+ "Nicaragua": {
+  "unit": "Polling Station",
+  "election_types": "Presidential"
+ },
+ "Nigeria": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Independent National Electoral Commission"
+  ],
+  "notes": [
+   "OCR errors in election results lead to known (corrected) and potentially unknown (uncorrected) cases of incorrect party abbreviations."
+  ]
+ },
+ "North Macedonia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Државна Изборна Комисија (State Election Commission)"
+  ]
+ },
+ "Norway": {
+  "unit": "Municipality (<= 2013), Electoral District (>= 2017)",
+  "election_types": "Legislative",
+  "sources": [
+   "Valgdirektoratet"
+  ],
+  "notes": [
+   "Spatial units in Norway before 2021 are a combination of formal municipality boundaries, where the municipality and the voting district are synonymous, and within-municipality Thiessen polygons based on geocodings of unit names."
+  ]
+ },
+ "Pakistan": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Election Commission of Pakistan (scraped by Colin Cookman)"
+  ],
+  "notes": [
+   "Supplementary shapefiles for Pakistan are provided at the NAME2_b (constituency) level."
+  ]
+ },
+ "Palestine": {
+  "unit": "Polling Station",
+  "election_types": "Legislative"
+ },
+ "Panama": {
+  "unit": "Electoral Circuit",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Electoral Tribunal of Panama"
+  ],
+  "notes": [
+   "Corregimientos are geolocated using ESRI, then matched to 2010 census boundaries."
+  ]
+ },
+ "Papua New Guinea": {
+  "unit": "Electorate",
+  "election_types": "Legislative",
+  "sources": [
+   "Wood (2019)"
+  ],
+  "notes": [
+   "Party vote totals differ from Wikipedia aggregates by a notable margin.",
+   "Port Moresby district boundaries are manually estimated.",
+   "Coordinates across all years assume current districts boundaries."
+  ]
+ },
+ "Paraguay": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Justicia Electoral"
+  ]
+ },
+ "Peru": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Oficina Nacional de Procesos Electorales"
+  ]
+ },
+ "Philippines": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Commission on Elections"
+  ]
+ },
+ "Poland": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Państwowa Komisja Wyborcza"
+  ],
+  "notes": [
+   "Thiessen polygons are generated at the address level, with multiple precincts per address.",
+   "Legislative election results are reported for Sejm lists rather than individual parties."
+  ]
+ },
+ "Portugal": {
+  "unit": "Parish",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Secretaria-Geral do Ministério da Administração Interna"
+  ],
+  "notes": [
+   "Parish boundaries from 2001 are used for pre-2001 years."
+  ]
+ },
+ "Romania": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Autoritatea Electorală Permanentă"
+  ]
+ },
+ "Russia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Shpilkin (2016, 2018, 2020)",
+   "GIS-Lab"
+  ],
+  "notes": [
+   "Systematic missingness of polling station coordinates by region means that Thiessen polygons are generated separately by region by year. This is also necessary to address Russian annexation of Crimea and Sevastopol.",
+   "Tens of polling stations reported as belonging to Moscow Oblast in 2012 actually fall within the bounds of the Moscow federal subject; the region was manually adjusted to account for this discrepancy."
+  ]
+ },
+ "Saint Lucia": {
+  "unit": "Polling District",
+  "election_types": "Legislative",
+  "notes": [
+   "Results are reported at the polling-box level (boxes A1(a), A1(b), etc.) within each constituency. Polling boxes are not individually geolocated, so each box is assigned its constituency's polygon and centroid and is therefore flagged as a geocode duplicate.",
+   "Constituency polygons are constructed from OCHA cod-ab settlement boundaries: each settlement is assigned to a constituency by matching its name to voter addresses in the electoral register and taking the majority registered constituency, unmatched settlements are filled by the nearest matched settlement within the same quarter, and settlements are then unioned per constituency. The split-quarter seats (the five Castries constituencies and the Gros Islet/Babonneau, Vieux Fort, Micoud, and Dennery pairs) carry some boundary-reconstruction uncertainty because their settlement-to-seat assignment is inferred from voter registrations rather than an official schedule."
+  ]
+ },
+ "Samoa": {
+  "unit": "Constituency",
+  "election_types": "Legislative"
+ },
+ "Senegal": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Conseil Constitutionnel"
+  ],
+  "notes": [
+   "Election data are incomplete; Thiessen polygons generated within department boundaries for completed reports."
+  ]
+ },
+ "Serbia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Републички завод за статистику Србије (Statistical Office of the Republic of Serbia)"
+  ]
+ },
+ "Seychelles": {
+  "unit": "District",
+  "election_types": "Legislative, Presidential"
+ },
+ "Singapore": {
+  "unit": "Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Elections Department Singapore"
+  ]
+ },
+ "Slovakia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Štatistický úrad Slovenskej republiky"
+  ]
+ },
+ "Slovenia": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Državna volilna komisija"
+  ]
+ },
+ "Solomon Islands": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Wood (2019)"
+  ]
+ },
+ "South Africa": {
+  "unit": "Voting Districts",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Commission of South Africa (voting units scraped by Adrian Firth)"
+  ],
+  "notes": [
+   "Party vote totals differ from Wikipedia aggregates by a notable margin, but data are downloaded directly from the government and no observations are dropped."
+  ]
+ },
+ "South Korea": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "중앙선거관리위원회 (National Election Commission)"
+  ]
+ },
+ "Spain": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Ministerio del Interior",
+   "Instituto Nacional de Estadística",
+   "Pérez et al. (2021)"
+  ]
+ },
+ "Sri Lanka": {
+  "unit": "Polling Division",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Election Commission of Sri Lanka"
+  ]
+ },
+ "Suriname": {
+  "unit": "Polling Station",
+  "election_types": "Legislative"
+ },
+ "Sweden": {
+  "unit": "Electoral District",
+  "election_types": "Legislative",
+  "sources": [
+   "Valmyndigheten"
+  ]
+ },
+ "Switzerland": {
+  "unit": "Municipality",
+  "election_types": "Legislative",
+  "sources": [
+   "Bundesamt für Statistik",
+   "Statistical Atlas of Switzerland"
+  ],
+  "notes": [
+   "Votes are manually calculated using reported turnout multiplied by reported vote-share for each party."
+  ]
+ },
+ "Taiwan": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "中央選舉委員會 (Central Election Commission, Taiwan)"
+  ],
+  "notes": [
+   "Due to extant issues with the data.gov.tw data downloading functionality, village boundaries from 2025 are used for the 2022 local elections.",
+   "Taiwan local elections are missing geocodings for the overseas Kinmen and Penghu counties."
+  ]
+ },
+ "Thailand": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "สำนักงานคณะกรรมการการเลือกตั้ง (Election Commission of Thailand)",
+   "สถาบันส่งเสริมการวิเคราะห์และบริหารข้อมูลขนาดใหญ่ภาครัฐ"
+  ]
+ },
+ "Timor-Leste": {
+  "unit": "Administrative Post",
+  "election_types": "Legislative"
+ },
+ "Trinidad and Tobago": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Elections And Boundaries Commission"
+  ]
+ },
+ "Tunisia": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Independent High Authority for Elections"
+  ]
+ },
+ "Turkey": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "Yüksek Seçim Kurulu"
+  ]
+ },
+ "Uganda": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Uganda Elections Data Portal"
+  ]
+ },
+ "Ukraine": {
+  "unit": "Polling Station",
+  "election_types": "Legislative, Presidential",
+  "sources": [
+   "дekoder"
+  ]
+ },
+ "United Kingdom": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Electoral Calculus",
+   "Office for National Statistics"
+  ]
+ },
+ "United States of America": {
+  "unit": "Precinct",
+  "election_types": "Presidential",
+  "sources": [
+   "Voting and Elections Science Team"
+  ]
+ },
+ "Uruguay": {
+  "unit": "Polling Station",
+  "election_types": "Legislative",
+  "sources": [
+   "Corte Electoral"
+  ],
+  "notes": [
+   "Results duplicated for \"Presidential\" and \"Legislative\" due to double simultaneous voting.",
+   "Owing to double simultaneous voting, party refers to the party, and party_b to the presidential candidate."
+  ]
+ },
+ "Vanuatu": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Legislative",
+  "sources": [
+   "Vanuatu Electoral Office"
+  ],
+  "notes": [
+   "Island districts composed of multiple smaller islands are manually stitched together using USGS data; some constituent islands are missing."
+  ]
+ },
+ "Venezuela": {
+  "unit": "Polling Station",
+  "election_types": "Presidential",
+  "sources": [
+   "Consejo Nacional Electoral"
+  ]
+ },
+ "Zambia": {
+  "unit": "Parliamentary Constituency",
+  "election_types": "Presidential",
+  "sources": [
+   "Electoral Commission of Zambia"
+  ]
+ },
+ "Zimbabwe": {
+  "unit": "Ward",
+  "election_types": "Presidential"
+ },
+ "Kyrgyz Republic": {
+  "unit": "Polling Station",
+  "sources": [
+   "Борбордук шайлоо комиссиясы"
+  ]
+ },
+ "General": {
+  "notes": [
+   "Total vote counts exclude invalid votes.",
+   "All Thiessen polygons across countries use consistent country borders from geoBoundaries. In some rare cases, like Taiwan, where the geoBoundaries lack precise definition, dated OpenStreetMap boundaries are used instead.",
+   "A single dash with a space on either side, \" - \", in the party column indicates a coalition between two or more parties; an em-dash is used when either a dash or an em-dash is formally in the party's name."
+  ]
+ },
+ "Northern Ireland": {
+  "notes": [
+   "2005 constituency shapefiles for the United Kingdom are drawn from the 2010 redrawn boundaries."
+  ]
+ }
+}

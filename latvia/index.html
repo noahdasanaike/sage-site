@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Latvia election results by polling station, 2014 to 2026 | SAGE</title>
+    <meta name="description" content="Latvia legislative election results by polling station for 2014, 2018, 2022 and 2026, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/latvia/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Latvia election results by polling station, 2014 to 2026 (SAGE)",
+ "description": "Latvia legislative election results by polling station for 2014, 2018, 2022 and 2026, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/latvia/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Latvia",
+  "Latvia elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2014/2026",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Latvia"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Latvia</div>
+
+    <header>
+        <h1>Latvia: election results by polling station</h1>
+        <p class="facts">2014&ndash;2026 &middot; 4 elections
+            &middot; LVA</p>
+    </header>
+
+    <p>SAGE has legislative election results for Latvia from 4 elections between 2014 and 2026: 2014, 2018, 2022 and 2026. The smallest unit is the polling station. The 2026 election has 939 polling stations, and 99% of them have a location. Unit boundaries are available for every election.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Latvia">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2014</td><td>Legislative (unicameral)</td><td>Abroad</td><td class="num"></td><td class="num">100</td><td class="num">0%</td><td class="num">22,968</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Latvia&amp;y=2014">[map]</a></td></tr>
+<tr><td></td><td>Legislative (unicameral)</td><td></td><td class="num"></td><td class="num">954</td><td class="num">100%</td><td class="num">883,597</td><td>yes</td><td></td></tr>
+<tr><td>2018</td><td>Legislative (unicameral)</td><td>Abroad</td><td class="num"></td><td class="num">123</td><td class="num">0%</td><td class="num">31,659</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Latvia&amp;y=2018">[map]</a></td></tr>
+<tr><td></td><td>Legislative (unicameral)</td><td></td><td class="num"></td><td class="num">955</td><td class="num">100%</td><td class="num">807,341</td><td>yes</td><td></td></tr>
+<tr><td>2022</td><td>Legislative (unicameral)</td><td>Abroad</td><td class="num"></td><td class="num">104</td><td class="num">0%</td><td class="num">24,872</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Latvia&amp;y=2022">[map]</a></td></tr>
+<tr><td></td><td>Legislative (unicameral)</td><td></td><td class="num"></td><td class="num">951</td><td class="num">100%</td><td class="num">878,767</td><td>yes</td><td></td></tr>
+<tr><td>2026</td><td>Legislative (unicameral)</td><td>Abroad</td><td class="num"></td><td class="num">120</td><td class="num">0%</td><td class="num">21,481</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Latvia&amp;y=2026">[map]</a></td></tr>
+<tr><td></td><td>Legislative (unicameral)</td><td></td><td class="num"></td><td class="num">939</td><td class="num">99%</td><td class="num">772,365</td><td>yes</td><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Latvia", years = 2026)
+
+Python: import sage
+        sage.sage_load("Latvia", years=[2026])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Centrālā vēlēšanu komisija</li></ul>
+    <h2>Notes</h2>
+<ul><li>Regions imputed for non-2018 years using spatial coordinates of polling stations and known region boundaries.</li></ul>
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/kyrgyzstan/">Kyrgyzstan</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/lebanon/">Lebanon</a> &rarr;
+    </p>
+</body>
+
+</html>

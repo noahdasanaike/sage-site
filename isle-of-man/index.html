@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Isle of Man election results by constituency, 2016 to 2026 | SAGE</title>
+    <meta name="description" content="Isle of Man legislative election results by constituency for 2016, 2021 and 2026, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/isle-of-man/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Isle of Man election results by constituency, 2016 to 2026 (SAGE)",
+ "description": "Isle of Man legislative election results by constituency for 2016, 2021 and 2026, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/isle-of-man/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Isle of Man",
+  "Isle of Man elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2016/2026",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Isle of Man"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Isle of Man</div>
+
+    <header>
+        <h1>Isle of Man: election results by constituency</h1>
+        <p class="facts">2016&ndash;2026 &middot; 3 elections
+            &middot; IMN</p>
+    </header>
+
+    <p>SAGE has legislative election results for the Isle of Man from 3 elections between 2016 and 2026: 2016, 2021 and 2026. The smallest unit is the constituency. The 2026 election has 12 constituencies, and 100% of them have a location. Unit boundaries are available for every election.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Isle of Man">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2016</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">12</td><td class="num">100%</td><td class="num">56,572</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Isle of Man&amp;y=2016">[map]</a></td></tr>
+<tr><td>2021</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">12</td><td class="num">100%</td><td class="num">58,914</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Isle of Man&amp;y=2021">[map]</a></td></tr>
+<tr><td>2026</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">12</td><td class="num">100%</td><td class="num">58,749</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Isle of Man&amp;y=2026">[map]</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Isle of Man", years = 2026)
+
+Python: import sage
+        sage.sage_load("Isle of Man", years=[2026])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Isle of Man Government, Elections</li></ul>
+    <h2>Notes</h2>
+<ul><li>House of Keys general elections in the 12 two-member constituencies of the 2013 boundaries, used unchanged in 2016, 2021 and 2026.</li><li>Each voter may cast up to two votes, so total_votes is the sum of candidate votes in the constituency and is roughly 1.7 to 1.9 times the number of voters. Votes are recorded by candidate; party is the ballot description on the Notice of Poll, and candidates without one are Independent.</li><li>The 2021 and 2026 figures are transcribed from hand-filled Notices of Result, read twice independently, and the two readings agree on every figure. No 2026 electorate by constituency was published, so reg and turnout_reg are missing for 2026.</li><li>Constituency polygons are the Isle of Man Government&#x27;s House of Keys constituency boundaries.</li></ul>
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/ireland/">Ireland</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/israel/">Israel</a> &rarr;
+    </p>
+</body>
+
+</html>

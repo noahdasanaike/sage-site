@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malta election results by electoral division, 2003 to 2026 | SAGE</title>
+    <meta name="description" content="Malta legislative election results by electoral division for 2003, 2008, 2013, 2017, 2022 and 2026, geocoded. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/malta/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Malta election results by electoral division, 2003 to 2026 (SAGE)",
+ "description": "Malta legislative election results by electoral division for 2003, 2008, 2013, 2017, 2022 and 2026, geocoded. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/malta/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Malta",
+  "Malta elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2003/2026",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Malta"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Malta</div>
+
+    <header>
+        <h1>Malta: election results by electoral division</h1>
+        <p class="facts">2003&ndash;2026 &middot; 6 elections
+            &middot; MLT</p>
+    </header>
+
+    <p>SAGE has legislative election results for Malta from 6 elections between 2003 and 2026: 2003, 2008, 2013, 2017, 2022 and 2026. The smallest unit is the electoral division. The 2026 election has 13 electoral divisions. There are no unit boundaries for this country.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Malta">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2003</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">282,213</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2003">[map]</a></td></tr>
+<tr><td>2008</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">290,799</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2008">[map]</a></td></tr>
+<tr><td>2013</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">305,556</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2013">[map]</a></td></tr>
+<tr><td>2017</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">310,665</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2017">[map]</a></td></tr>
+<tr><td>2022</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">295,248</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2022">[map]</a></td></tr>
+<tr><td>2026</td><td>Legislative (lower house)</td><td></td><td class="num"></td><td class="num">13</td><td class="num">0%</td><td class="num">306,036</td><td></td><td><a href="https://noahdasanaike.github.io/explore/#c=Malta&amp;y=2026">[map]</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Malta", years = 2026)
+
+Python: import sage
+        sage.sage_load("Malta", years=[2026])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Electoral Commission of Malta</li></ul>
+    <h2>Notes</h2>
+<ul><li>Votes are first-count (first-preference) votes under the Single Transferable Vote, summed from candidates to parties. Later-count transfers are not recorded.</li><li>The 13 electoral divisions are the finest published grain. Ballot boxes are mixed within each division before counting, so no locality or polling-station results exist.</li><li>Geometry is Missing for all years. Division boundaries are redrawn before each election and are published only as street-level descriptions, not as maps or polygons.</li><li>total_votes is the division&#x27;s published valid vote, and turnout_reg is valid votes over the revised electoral register, so it runs a few points below the official turnout, which counts all ballots cast.</li></ul>
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/maldives/">Maldives</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/mauritania/">Mauritania</a> &rarr;
+    </p>
+</body>
+
+</html>

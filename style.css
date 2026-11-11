@@ -1,0 +1,423 @@
+
+        body {
+            max-width: 800px;
+            margin: auto;
+            padding: 1em;
+            text-align: justify;
+            hyphens: auto;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        h1 {
+            color: #750014;
+        }
+
+        h2 {
+            color: #750014;
+        }
+
+        h3 {
+            color: #A0522D;
+        }
+
+        a {
+            color: #750014;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0.5em;
+        }
+
+        .back-link {
+            margin-bottom: 2em;
+        }
+
+        /* Hero actions */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+            margin: 2em 0;
+        }
+
+        .action-card {
+            flex: 1 1 260px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.2em;
+            text-align: center;
+            display: block;
+            color: #333;
+        }
+
+        .action-card:hover {
+            text-decoration: none;
+            border-color: #750014;
+        }
+
+        .action-card .big {
+            display: block;
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #750014;
+            margin-bottom: 0.3em;
+        }
+
+        .action-card .sub {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Format / package blocks */
+        .formats {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 0.5em 1.2em;
+            margin: 1.5em 0;
+            background: #fcfcfc;
+        }
+
+        pre {
+            background: #f5f5f5;
+            border-radius: 4px;
+            padding: 0.8em;
+            overflow-x: auto;
+            font-size: 0.85em;
+        }
+
+        /* Country download grid */
+        .country-search {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            margin: 0.5em 0 1em;
+        }
+
+        .country-list {
+            line-height: 1.7;
+        }
+
+        .country-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0 1em;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .country-row .links {
+            white-space: nowrap;
+        }
+
+        /* Coverage table */
+        .coverage-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em 1em;
+            align-items: center;
+            margin: 0.5em 0;
+        }
+
+        .coverage-controls input[type=text] {
+            flex: 1 1 14em;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .coverage-wrap {
+            max-height: 32em;
+            overflow: auto;
+            border: 1px solid #eee;
+        }
+
+        .coverage-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.85em;
+        }
+
+        .coverage-table th {
+            position: sticky;
+            top: 0;
+            background: #f9f9f9;
+            cursor: pointer;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .coverage-table th,
+        .coverage-table td {
+            padding: 4px 8px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .coverage-table td.num,
+        .coverage-table th.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .coverage-table a.cov-page {
+            color: #750014;
+        }
+
+        .coverage-table td.page-cell {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .coverage-table a.page-btn {
+            display: inline-block;
+            padding: 1px 8px;
+            border: 1px solid #750014;
+            border-radius: 3px;
+            color: #750014;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+
+        .coverage-table a.page-btn:hover {
+            background: #750014;
+            color: #fff;
+        }
+
+        .coverage-table div.detail-scroll {
+            overflow-x: auto;
+        }
+
+        .coverage-table p.detail-page {
+            margin: 0.3em 0 0.5em;
+            font-weight: bold;
+            white-space: normal;
+        }
+
+        @media (max-width: 600px) {
+            /* phones: country, years and the page button; the numbers are in the opened row */
+            #coverage-head th:nth-child(3), #coverage-head th:nth-child(4),
+            #coverage-head th:nth-child(5), #coverage-head th:nth-child(6),
+            #coverage-body > tr:not(.cov-detail) > td:nth-child(3),
+            #coverage-body > tr:not(.cov-detail) > td:nth-child(4),
+            #coverage-body > tr:not(.cov-detail) > td:nth-child(5),
+            #coverage-body > tr:not(.cov-detail) > td:nth-child(6) {
+                display: none;
+            }
+
+            #coverage-body > tr.cov-country > td:first-child {
+                white-space: nowrap;
+            }
+
+            .coverage-table .pb-long {
+                display: none;
+            }
+
+            /* the opened table scrolls on its own and does not widen the main table */
+            #coverage-body > tr.cov-detail > td {
+                max-width: 0;
+                padding-left: 8px;
+            }
+        }
+
+        .coverage-table tr.cov-country {
+            cursor: pointer;
+        }
+
+        .dl-table td {
+            text-align: left;
+        }
+
+        .dl-table tr.cov-country > td:first-child {
+            white-space: nowrap;
+        }
+
+        .dl-table td.dl-links .dl {
+            margin-left: 0;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
+        .dl-size {
+            color: #888;
+        }
+
+        .coverage-table tr.cov-country:hover {
+            background: #faf5f5;
+        }
+
+        .coverage-table .cov-toggle {
+            border: none;
+            background: none;
+            color: #750014;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 0 4px 0 0;
+        }
+
+        .coverage-table tr.cov-detail>td {
+            background: #fcfcfc;
+            padding: 4px 8px 10px 28px;
+        }
+
+        .coverage-table table.cov-years {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.95em;
+        }
+
+        .coverage-table table.cov-years th {
+            position: static;
+            background: none;
+            cursor: default;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .coverage-table tr.year-first td {
+            border-top: 1px solid #e4e4e4;
+        }
+
+        .country-row .name {
+            color: #333;
+        }
+
+        .country-row .dl {
+            font-size: 0.8em;
+            color: #750014;
+            margin-left: 6px;
+        }
+
+        /* Announcements */
+        .email-form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5em;
+            margin: 2em auto;
+            text-align: center;
+            max-width: 520px;
+        }
+
+        .email-form h3 {
+            margin-top: 0;
+            color: #750014;
+        }
+
+        .email-form input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 280px;
+            max-width: 70%;
+            font-size: 1em;
+        }
+
+        .email-form button {
+            background-color: #750014;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-left: 8px;
+        }
+
+        .email-form button:hover {
+            background-color: #5a0010;
+        }
+
+        .email-note {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 1em;
+            font-style: italic;
+        }
+
+        /* Changelog toggle */
+        .version-section {
+            margin: 2em 0;
+        }
+
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .version-title {
+            margin: 0;
+            color: #750014;
+        }
+
+        .version-date {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .abstract-toggle {
+            color: #750014;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font: inherit;
+        }
+
+        .abstract-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .abstract-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .abstract-content.expanded {
+            max-height: 600px;
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 2px solid black;
+            margin-top: 2em;
+            padding: 1em;
+        }
+    
+        /* country pages */
+        .crumbs { font-size: 0.9em; margin-bottom: 1em; }
+        .facts { color: #444; }
+        .country-index { columns: 3 12em; column-gap: 2em; line-height: 1.7; margin: 0.5em 0 1.5em; }
+        .country-index a { color: #333; }
+        .country-index a:hover { color: #750014; }
+        table.plain { border-collapse: collapse; width: 100%; font-size: 0.88em; margin: 0.5em 0 1em; }
+        table.plain th { text-align: left; background: #f9f9f9; white-space: nowrap; }
+        table.plain th, table.plain td { padding: 4px 8px; border-bottom: 1px solid #f0f0f0; }
+        table.plain td.num, table.plain th.num { text-align: right; font-variant-numeric: tabular-nums; }
+        .table-scroll { overflow-x: auto; }
+        .dl-size { color: #888; }
+        td .dl { white-space: nowrap; margin-right: 6px; }

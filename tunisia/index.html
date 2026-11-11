@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tunisia election results by polling station, 2014 | SAGE</title>
+    <meta name="description" content="Tunisia presidential election results by polling station for 2014, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R." />
+    <link rel="canonical" href="https://sage-elections.com/tunisia/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org/",
+ "@type": "Dataset",
+ "name": "Tunisia election results by polling station, 2014 (SAGE)",
+ "description": "Tunisia presidential election results by polling station for 2014, geocoded with boundaries. Free download as CSV, GeoPackage, Parquet or R. Part of the Small-Area Global Elections (SAGE) Dataset.",
+ "url": "https://sage-elections.com/tunisia/",
+ "keywords": [
+  "elections",
+  "election results",
+  "polling stations",
+  "Tunisia",
+  "Tunisia elections",
+  "geocoded"
+ ],
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "Noah Dasanaike"
+ },
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "The Small-Area Global Elections (SAGE) Dataset",
+  "url": "https://sage-elections.com/",
+  "identifier": "https://doi.org/10.7910/DVN/YGJR1L"
+ },
+ "temporalCoverage": "2014/2014",
+ "spatialCoverage": {
+  "@type": "Place",
+  "name": "Tunisia"
+ },
+ "citation": "Dasanaike, Noah. \"The Small-Area Global Elections (SAGE) Dataset.\" Scientific Data (2026)."
+}
+    </script>
+</head>
+
+<body>
+    <div class="crumbs"><a href="/">SAGE</a> &rsaquo; <a href="/#countries">Countries</a> &rsaquo; Tunisia</div>
+
+    <header>
+        <h1>Tunisia: election results by polling station</h1>
+        <p class="facts">2014 &middot; 1 election
+            &middot; TUN</p>
+    </header>
+
+    <p>SAGE has presidential election results for Tunisia from 2014. The smallest unit is the polling station. The 2014 election has 10,572 polling stations, and 100% of them have a location. Unit boundaries are available for every election.</p>
+
+    <p class="toplinks">
+        [<a href="https://noahdasanaike.github.io/explore/#c=Tunisia">explore on the map</a>]
+        [<a href="#download">download</a>]
+        [<a href="https://storage.googleapis.com/sage-archive/codebook.pdf" target="_blank" rel="noopener">codebook</a>]
+        [<a href="/">all 134 countries</a>]
+    </p>
+
+    <h2>Elections</h2>
+    <p>Units are the smallest units in the data, and located units are those with coordinates.
+        A year with several rows has several contests or votes; filter on them before you add up votes.</p>
+    <div class="table-scroll">
+        <table class="plain">
+            <thead>
+                <tr><th>Year</th><th>Election type</th><th>Vote type</th><th class="num">Round</th>
+                    <th class="num">Units</th><th class="num">% located</th><th class="num">Votes</th>
+                    <th>Polygons</th><th></th></tr>
+            </thead>
+            <tbody>
+<tr><td>2014</td><td>Presidential</td><td>First Round</td><td class="num">1</td><td class="num">10,504</td><td class="num">100%</td><td class="num">3,250,681</td><td>yes</td><td><a href="https://noahdasanaike.github.io/explore/#c=Tunisia&amp;y=2014">[map]</a></td></tr>
+<tr><td></td><td>Presidential</td><td>Second Round</td><td class="num">2</td><td class="num">10,572</td><td class="num">100%</td><td class="num">3,073,796</td><td>yes</td><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="download">Download</h2>
+    <p><strong>csv</strong> opens in Excel, Stata, R, or Python. <strong>gpkg</strong> has the unit boundaries
+        for QGIS, ArcGIS, R, or Python. <strong>parquet</strong> has the vote rows as Parquet.
+        <strong>rds</strong> is the native R <code>sf</code> object. Each ZIP has a README with the columns.</p>
+    <p>See the <a href="/#download">download section</a> on the main page.</p>
+
+    <p>In R or Python:</p>
+    <pre>R:      install.packages("sage")
+        sage::sage_load("Tunisia", years = 2014)
+
+Python: import sage
+        sage.sage_load("Tunisia", years=[2014])</pre>
+
+    <h2>Sources</h2>
+<ul><li>Independent High Authority for Elections</li></ul>
+    
+
+    <h2>Citation</h2>
+    <p>Dasanaike, Noah. &ldquo;The Small-Area Global Elections (SAGE) Dataset.&rdquo; <em>Scientific Data</em> (2026). <a href="https://www.nature.com/articles/s41597-026-07869-x">Paper</a> &middot; <a href="https://doi.org/10.7910/DVN/YGJR1L">Harvard Dataverse</a></p>
+    
+
+    <p class="crumbs" style="margin-top:2em;">
+        &larr; <a href="/trinidad-and-tobago/">Trinidad and Tobago</a> &middot; <a href="/">All countries</a> &middot;
+        <a href="/turkey/">Turkey</a> &rarr;
+    </p>
+</body>
+
+</html>
