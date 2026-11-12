@@ -482,6 +482,99 @@
         <p><a href="index.html">by Noah Dasanaike</a></p>
     </header>
 
+    <figure class="globe">
+        <canvas id="globe" width="240" height="240" aria-label="A spinning globe with a sample of SAGE unit locations"></canvas>
+    </figure>
+    <style>
+        figure.globe { margin: 0.5em auto 1.2em; text-align: center; }
+        figure.globe canvas { width: 240px; height: 240px; cursor: grab; touch-action: none; }
+    </style>
+    <script>
+        (function () {
+            const cv = document.getElementById('globe'), ctx = cv.getContext('2d');
+            const S = 240, dpr = window.devicePixelRatio || 1, R = S / 2 - 2, C = S / 2;
+            cv.width = cv.height = S * dpr; ctx.scale(dpr, dpr);
+            const D = Math.PI / 180, tilt = 18 * D, sT = Math.sin(tilt), cT = Math.cos(tilt);
+            let lon0 = -20, n = 0, sl, cl, sp, cp, rings = [], drag = null, last = performance.now();
+            const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function proj(sinL, cosL, sinP, cosP, s0, c0) {
+                const cd = cosL * c0 + sinL * s0, sd = sinL * c0 - cosL * s0;
+                const z = sT * sinP + cT * cosP * cd;
+                return [C + R * cosP * sd, C - R * (cT * sinP - sT * cosP * cd), z];
+            }
+            function line(pts, s0, c0) {
+                let on = false;
+                ctx.beginPath();
+                for (const [l, p] of pts) {
+                    const q = proj(Math.sin(l * D), Math.cos(l * D), Math.sin(p * D), Math.cos(p * D), s0, c0);
+                    if (q[2] > 0) { on ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]); on = true; } else on = false;
+                }
+                ctx.stroke();
+            }
+            function draw() {
+                const s0 = Math.sin(lon0 * D), c0 = Math.cos(lon0 * D);
+                ctx.clearRect(0, 0, S, S);
+                ctx.fillStyle = '#fcfcfc'; ctx.strokeStyle = '#ccc'; ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.arc(C, C, R, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+                ctx.strokeStyle = '#ececec';
+                for (let m = -180; m < 180; m += 30) line(Array.from({ length: 37 }, (_, i) => [m, -90 + 5 * i]), s0, c0);
+                for (let p = -60; p <= 60; p += 30) line(Array.from({ length: 73 }, (_, i) => [-180 + 5 * i, p]), s0, c0);
+                ctx.fillStyle = '#e4e4e4'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 0.5;
+                for (const r of rings) {
+                    ctx.beginPath();
+                    let any = false;
+                    for (let i = 0; i < r.length; i += 4) {
+                        let q = proj(r[i], r[i + 1], r[i + 2], r[i + 3], s0, c0);
+                        if (q[2] > 0) any = true;
+                        else { const dx = q[0] - C, dy = q[1] - C, h = Math.hypot(dx, dy) || 1; q = [C + R * dx / h, C + R * dy / h]; }
+                        i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]);
+                    }
+                    if (any) { ctx.closePath(); ctx.fill(); ctx.stroke(); }
+                }
+                ctx.fillStyle = 'rgba(117, 0, 20, 0.55)';
+                for (let i = 0; i < n; i++) {
+                    const q = proj(sl[i], cl[i], sp[i], cp[i], s0, c0);
+                    if (q[2] > 0) ctx.fillRect(q[0] - 0.5, q[1] - 0.5, 1.1, 1.1);
+                }
+            }
+            function tick(t) {
+                if (!drag && !still) lon0 = (lon0 - (t - last) * 0.006) % 360;
+                last = t; draw(); requestAnimationFrame(tick);
+            }
+            cv.addEventListener('pointerdown', e => { drag = e.clientX; cv.setPointerCapture(e.pointerId); cv.style.cursor = 'grabbing'; });
+            cv.addEventListener('pointermove', e => { if (drag !== null) { lon0 -= (e.clientX - drag) * 0.5; drag = e.clientX; } });
+            const up = () => { drag = null; cv.style.cursor = 'grab'; };
+            cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+            function load() {
+                const bin = atob(window.SAGE_GLOBE), a = new Int16Array(bin.length / 2);
+                for (let i = 0; i < a.length; i++) a[i] = (bin.charCodeAt(2 * i) | bin.charCodeAt(2 * i + 1) << 8) << 16 >> 16;
+                n = a.length / 2;
+                sl = new Float32Array(n); cl = new Float32Array(n); sp = new Float32Array(n); cp = new Float32Array(n);
+                for (let i = 0; i < n; i++) {
+                    const l = a[2 * i] / 180 * D, p = a[2 * i + 1] / 360 * D;
+                    sl[i] = Math.sin(l); cl[i] = Math.cos(l); sp[i] = Math.sin(p); cp[i] = Math.cos(p);
+                }
+            }
+            function loadCountries() {
+                const bin = atob(window.SAGE_COUNTRIES), a = new Int16Array(bin.length / 2);
+                for (let i = 0; i < a.length; i++) a[i] = (bin.charCodeAt(2 * i) | bin.charCodeAt(2 * i + 1) << 8) << 16 >> 16;
+                for (let i = 0; i < a.length;) {
+                    const k = a[i++], r = new Float32Array(4 * k);
+                    for (let j = 0; j < k; j++, i += 2) {
+                        const l = a[i] / 180 * D, p = a[i + 1] / 360 * D;
+                        r[4 * j] = Math.sin(l); r[4 * j + 1] = Math.cos(l); r[4 * j + 2] = Math.sin(p); r[4 * j + 3] = Math.cos(p);
+                    }
+                    rings.push(r);
+                }
+            }
+            const jc = document.createElement('script');
+            jc.src = 'data/globe_countries.js'; jc.onload = loadCountries; document.head.appendChild(jc);
+            const js = document.createElement('script');
+            js.src = 'data/globe_points.js'; js.onload = load; document.head.appendChild(js);
+            requestAnimationFrame(tick);
+        })();
+    </script>
+
     <p>SAGE contains lower-house parliamentary and presidential election returns for 134 countries at the
         smallest unit each electoral authority publishes, which for most countries is a polling station with fewer
         than a thousand voters. I scraped, compiled, geocoded, and harmonized the data over the span of 2022-2026. In
